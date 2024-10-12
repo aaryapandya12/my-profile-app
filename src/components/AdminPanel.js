@@ -146,7 +146,7 @@ const AdminPanel = ({ profiles, setProfiles }) => {
               <img src={profile.photo} alt={profile.name} width="50" />
             </p>
             <p>
-              <strong>Description:</strong> {profile.description}
+              <strong>Contact:</strong> {profile.contact}
             </p>
             <p>
               <strong>Address:</strong> {profile.address}
