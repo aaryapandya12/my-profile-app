@@ -9,6 +9,7 @@ mapboxgl.accessToken =
 function MapComponent({ lat, lng }) {
   const mapContainer = useRef(null);
   const [loading, setLoading] = useState(true);
+  const [map, setMap] = useState(null);
 
   useEffect(() => {
     if (
@@ -21,21 +22,30 @@ function MapComponent({ lat, lng }) {
       return;
     }
 
-    const map = new mapboxgl.Map({
+    const mapInstance = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/streets-v11",
       center: [lng, lat],
       zoom: 8,
     });
 
-    new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
+    new mapboxgl.Marker().setLngLat([lng, lat]).addTo(mapInstance);
 
-    map.on("load", () => {
+    mapInstance.on("load", () => {
       setLoading(false);
     });
 
-    return () => map.remove();
+    setMap(mapInstance);
+
+    return () => mapInstance.remove();
   }, [lat, lng]);
+
+  const resetMap = () => {
+    if (map) {
+      map.setCenter([lng, lat]);
+      map.setZoom(8);
+    }
+  };
 
   return (
     <div style={{ position: "relative" }}>
@@ -58,6 +68,12 @@ function MapComponent({ lat, lng }) {
         </div>
       )}
       <div ref={mapContainer} style={{ height: "400px", width: "100%" }} />
+      <button
+        onClick={resetMap}
+        style={{ position: "absolute", top: 10, right: 10 }}
+      >
+        Reset Map
+      </button>
     </div>
   );
 }

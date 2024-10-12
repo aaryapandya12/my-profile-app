@@ -6,6 +6,7 @@ import AdminPanel from "./components/AdminPanel";
 import SearchFilter from "./components/SearchFilter";
 import profilesData from "./data/profiles.json";
 import { ClipLoader } from "react-spinners";
+import Footer from "./components/Footer"; 
 
 const App = () => {
   const [profiles, setProfiles] = useState([]);
@@ -24,7 +25,11 @@ const App = () => {
     <Router>
       <div>
         <nav className="navbar">
-          <h1 className="navbar-title">Profile Viewer</h1>
+          <h1 className="navbar-title">ViewSphere</h1>
+          <SearchFilter
+            profiles={profiles}
+            setFilteredProfiles={setFilteredProfiles}
+          />
           <div className="navbar-links">
             <Link to="/">Home</Link>
             <Link to="/admin" style={{ marginLeft: "10px" }}>
@@ -33,10 +38,7 @@ const App = () => {
           </div>
         </nav>
 
-        <SearchFilter
-          profiles={profiles}
-          setFilteredProfiles={setFilteredProfiles}
-        />
+        <h1>Profiles</h1>
 
         {loading ? (
           <div className="loading-indicator">
@@ -60,6 +62,8 @@ const App = () => {
             />
           </Routes>
         )}
+
+        <Footer />
       </div>
     </Router>
   );

@@ -6,7 +6,7 @@
     "description": "Software Engineer",
     "contact": "john@example.com",
     "interests": ["Coding", "Hiking", "Reading"],
-    "latitude": 40.7128,
+    "latitude":  40.7128,
     "longitude": -74.0060,
     "address": "123 Main St, New York, NY"
   },

@@ -10,7 +10,7 @@ const SearchFilter = ({ profiles, setFilteredProfiles }) => {
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
       const matchesLocation = filterLocation
-        ? profile.location.toLowerCase().includes(filterLocation.toLowerCase())
+        ? profile.address.toLowerCase().includes(filterLocation.toLowerCase())
         : true;
       return matchesName && matchesLocation;
     });

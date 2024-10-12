@@ -25,12 +25,13 @@ const ProfileDetails = ({ profiles }) => {
         <strong>Contact:</strong> {profile.contact}
       </p>
       <p>
-        <strong>Interests:</strong> {profile.interests.join(", ")}
+        <strong>Interests:</strong>
+        {Array.isArray(profile.interests)
+          ? profile.interests.join(", ")
+          : profile.interests}
       </p>
       <p>
-        {" "}
-        <strong>Address:</strong>
-        {profile.address}
+        <strong>Address:</strong> {profile.address}
       </p>
       <button onClick={handleMapToggle}>
         {showMap ? "Hide Map" : "Show on Map"}
