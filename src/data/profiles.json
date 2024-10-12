@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "photo": "https://nursinginstitutegoa.org/wp-content/uploads/2016/01/tutor-8.jpg",
+    "description": "Software Engineer",
+    "contact": "john@example.com",
+    "interests": ["Coding", "Hiking", "Reading"],
+    "latitude": 40.7128,
+    "longitude": -74.0060,
+    "address": "123 Main St, New York, NY"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMYR0TAT4xCZgg-7cvDs2gH02sMGHAIbFDYQ&s",
+    "description": "Graphic Designer",
+    "contact": "jane@example.com",
+    "interests": ["Design", "Traveling", "Photography"],
+    "latitude": 34.0522,
+    "longitude": -118.2437,
+    "address": "456 Elm St, Los Angeles, CA"
+  },
+  {
+    "id": 3,
+    "name": "Alice Johnson",
+    "photo": "https://pyxis.nymag.com/v1/imgs/a04/387/03476c6dd25b8ea5c19db259e7538080fc-06-alice-johnson.rsquare.w768.jpg",
+    "description": "Data Scientist",
+    "contact": "alice@example.com",
+    "interests": ["Machine Learning", "Traveling", "Cooking"],
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "address": "789 Oak St, Chicago, IL"
+  },
+  {
+    "id": 4,
+    "name": "Bob Brown",
+    "photo": "https://bobbrown.org.au/wp-content/uploads/2022/08/bob-icon.webp",
+    "description": "Marketing Specialist",
+    "contact": "bob@example.com",
+    "interests": ["SEO", "Content Writing", "Social Media"],
+    "latitude": 29.7604,
+    "longitude": -95.3698,
+    "address": "321 Pine St, Houston, TX"
+  }
+  
+]
