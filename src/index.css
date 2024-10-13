@@ -372,67 +372,6 @@ nav .admin-button:hover {
   background-color: #ff2929;
 }
 
-
-@media (max-width: 768px) {
-  .profile-card {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  .search-filter input {
-    width: 80%;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav a {
-    margin: 5px 0;
-  }
-
-  .profile-details {
-    padding: 20px;
-  }
-
-  .profile-details h2 {
-    font-size: 2em;
-  }
-}
-
-@media (max-width: 480px) {
-  .profile-card {
-    padding: 15px;
-  }
-
-  .profile-details {
-    padding: 15px;
-  }
-
-  .profile img {
-    max-width: 40px;
-  }
-
-  .profile-details img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .search-filter input {
-    width: 100%;
-  }
-
-  .search-filter button {
-    width: 100%;
-  }
-
-  .admin-panel input {
-    width: 100%;
-  }
-}
-
-
 .search-filter-container {
   display: flex;
   justify-content: center;
@@ -638,4 +577,68 @@ nav .admin-button:hover {
 .footer a:hover {
   color: #21a1f1; 
   text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  nav {
+    padding: 10px 20px;
+  }
+  nav h1 {
+    font-size: 1.5rem;
+  }
+  .profile-card {
+    width: 200px;
+  }
+  .profile-details {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav a {
+    margin: 5px 0;
+  }
+  .profile-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-card {
+    width: 100%;
+    margin: 10px auto;
+  }
+  .profile-details {
+    padding: 20px;
+  }
+  .profile-details h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 1.2rem;
+  }
+  .profile-card {
+    padding: 15px;
+  }
+  .profile-details {
+    padding: 15px;
+  }
+  .profile img {
+    max-width: 40px;
+  }
+  .profile-details img {
+    width: 150px;
+    height: 150px;
+  }
+  .search-filter input {
+    width: 100%;
+  }
 }
