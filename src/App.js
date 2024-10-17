@@ -26,10 +26,12 @@ const App = () => {
       <div>
         <nav className="navbar">
           <h1 className="navbar-title">ViewSphere</h1>
+
           <SearchFilter
             profiles={profiles}
             setFilteredProfiles={setFilteredProfiles}
           />
+          
           <div className="navbar-links">
             <Link to="/">Home</Link>
             <Link to="/admin" style={{ marginLeft: "10px" }}>

@@ -20,7 +20,7 @@ const SearchFilter = ({ profiles, setFilteredProfiles }) => {
 
   useEffect(() => {
     filterProfiles();
-  }, [filterProfiles]);
+  }, [filterProfiles,searchTerm,filterLocation]);
 
   return (
     <div className="search-filter">
@@ -44,3 +44,7 @@ const SearchFilter = ({ profiles, setFilteredProfiles }) => {
 };
 
 export default SearchFilter;
+
+
+
+
